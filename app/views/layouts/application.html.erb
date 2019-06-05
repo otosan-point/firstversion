@@ -7,9 +7,27 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta charset="UTF-8" />
+    <title>おとうさんポイント</title>
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css"> <!-- ブラウザのスタイルをキャンセルするCSS -->
+    <link href="https://fonts.googleapis.com/css?family=Seymour+One" rel="stylesheet"> <!-- ウェブフォント -->
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
   </head>
 
   <body>
+    
+    <div class="header">
+      <i class="fas fa-pencil-alt"></i>
+      お父さんポイント
+    </div>
+    
     <%= yield %>
+
+    <div class="footer">
+      Copyright © 2019 Otosan-Point All Rights Reserved.
+    </div>
+
   </body>
 </html>
