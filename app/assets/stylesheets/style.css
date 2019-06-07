@@ -59,6 +59,138 @@ html {
     border-radius: 10px;/*角の丸み*/
 }
 
+.contents {
+  height: calc(100vh - 140px);
+  background-color: #ffffff;
+
+}
+
+.boxA:after{
+    content: "";
+    display: block;
+    clear: both
+}
+
+.box2{
+    float: left;
+    width: 50%
+}
+
+
+/* 黒板風　タイトル　2 */
+.kokuban-t2 {
+ width: 500px;
+ height: 200px;
+ position: relative;
+ margin: 20px auto 50px;
+ padding: 3.2em 1em 1em;
+ background-color: #006633; /* ボックス背景色 */
+ color: #fff; /* 文章色 */
+ border: 8px solid #b2771f; /* 枠線 */
+ border-radius: 3px; /* 角の丸み */
+ box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
+ font-family: 'Kosugi Maru', sans-serif;
+
+}
+.kokuban-t2::before,
+.kokuban-t2::after {
+ position: absolute;
+ content: '';
+ bottom: 0;
+} 
+.kokuban-t2::before {
+ right: 10px;
+ border: solid 3px #fff; /*チョーク（白）*/
+ width: 20px; 
+ border-radius: 3px 2px 0 2px;
+}
+.kokuban-t2::after {
+ right: 40px;
+ border: solid 3px #ffff6b; /*チョーク（黄色）*/
+ width: 15px; 
+ border-radius: 8px 5px 2px 5px;
+}
+.title-t2 {
+ position: absolute;
+ left: 1em;
+ top: .5em;
+ font-weight: bold;
+ font-size: 25PX;
+ font-family: 'Kosugi Maru', sans-serif;
+ color: #ffff6b; /* タイトル色 */
+}
+
+.title-t3 {
+ position: absolute;
+ right: 1em;
+ bottom: 1em;
+ font-weight: bold;
+ font-size: 25px;
+ font-family: 'Kosugi Maru', sans-serif;
+ color: #ffff6b; /* タイトル色 */
+}
+
+
+.promise_card {
+    width: 500px;
+    height: 200px;
+    position: relative;
+    padding: 10px 10px;
+    margin: 10px auto;
+    border: solid 3px #62c1ce;
+    margin-bottom: 60px;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px #000;
+    -webkit-box-shadow: 5px 5px 10px #adadad;
+    -moz-box-shadow: 5px 5px 10px #adadad;
+}
+
+.promise_card .card_title {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
+    background: #62c1ce;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+.promise_card p {
+    font-size: 30px;
+    padding-top: 60px;
+	  text-align: center;
+	  
+}
+
+.badge	{width: 100px;
+	height: 100px;
+	padding-top: 25px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 60px;
+	background-color: #00a0e9;
+	color: #ffffff;
+	text-align: center;
+	box-shadow: 0 0 4px #aaaaaa}
+
+.badge i	{display: block;
+	font-size: 40px}
+
+
+/* バッジの表示位置 */
+.pickup	{position: relative}
+
+.badge	{position: absolute;
+	top: 65%;
+	right: -20px}
+
+
+
 .footer {
     height: 50px;
     background-color:#fa6400;
