@@ -71,10 +71,54 @@ html {
     clear: both
 }
 
-.box2{
+.box3{
     float: left;
-    width: 50%
+    width: 30%;
+    padding: 1px 1px;
 }
+
+.box5{
+    float: left;
+    width: 50%;
+}
+
+.box7{
+    float: left;
+    width: 70%;
+}
+
+
+/* 写真に白色フィルター */
+.colorfilter-base {
+    background-color: white;     /* カラーフィルタ効果の色を指定 */
+    display: inline-block;     /* (任意：インラインブロック化したい場合) */
+    position: relative
+}
+.colorfilter-image {
+    opacity: 0.6;     /* カラーフィルタ効果の度合いを指定 */
+    display: block;
+    max-width: 100%;
+	height: auto;
+	vertical-align: bottom
+}
+
+/* ヘッダー画像 */
+.topimg	{max-width: 100%;
+	height: auto;
+	vertical-align: bottom}
+
+/* キャッチコピー */
+.catch	{margin: 0;
+	padding: 15px;
+	background-color: rgba(255,255,255,0.7);
+	font-size: 28px}
+
+/* ヘッダー画像にキャッチコピーを重ねる */
+.top	{position: relative}
+
+.catch	{position: absolute;
+	bottom: 20%;
+	left: 10%}
 
 
 /* 黒板風　タイトル　2 */
