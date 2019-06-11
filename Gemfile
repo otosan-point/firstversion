@@ -68,3 +68,6 @@ gem 'hirb'
 gem 'hirb-unicode'
 gem 'devise'
 gem 'kaminari'
+
+gem 'jquery-rails' 
+gem 'jquery-ui-rails'
