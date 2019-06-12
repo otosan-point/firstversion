@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+
+    <div class="header">
+      <i class="fas fa-pencil-alt"></i>
+      お父さんポイント
+    </div>
+
+<div class="menu">
+  <ul>
+    <li><a>はるか</a></li>
+    <li><a>ともはる</a></li>
+    <li><a>ひなた</a></li>
+    <li><a><i class="fas fa-lock"></i><%= link_to "おとうさん", user_path(current_user) %></a></li>
+    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+  </ul>  
+  
+</div>
+
+<% end %>
