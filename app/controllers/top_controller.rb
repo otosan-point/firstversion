@@ -1,8 +1,12 @@
 class TopController < ApplicationController
   
   def index
-    @points = Action.where(approve: '2').count
-    @promises = Promise.includes(:user).page(params[:page]).per(5).order("created_at DESC")
+    
+    kids = current_user.actions.includes(:kid_id)
+    @approves = kids.includes(:approve)
+    #現在ログインしているユーザーの子供の合計ポイントをViewに渡す
+    
+    #@promises = Promise.includes(:user).page(params[:page]).per(5).order("created_at DESC")
   end
 
 end
