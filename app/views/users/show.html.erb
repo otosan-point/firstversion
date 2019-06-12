@@ -1,1 +1,5 @@
-<%= @user.email %>のユーザーページです。
+<%= @user.email %>のユーザーページです。<br>
+
+<% @kids.each do |kid| %>
+    <%= kid.name %><br>
+<% end %>
