@@ -60,7 +60,7 @@ html {
 }
 
 .contents {
-  height: calc(100vh - 140px);
+  /* height: calc(100vh - 140px); */
   background-color: #ffffff;
 
 }
@@ -79,7 +79,8 @@ html {
 
 .box5{
     float: left;
-    width: 50%;
+    padding: 1em;
+    /* width: 50%; */
 }
 
 .box7{
