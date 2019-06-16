@@ -91,9 +91,11 @@
         <div class="twitter__block-text">
           <div class="name"><%= kid.name %><span class="name_reply"></span></div>
           <div class="date">10分前</div>
-          <div class="text">
-            <%= @comment_kid %> <br>
+            <% @comment_kid.each do |comment| %> <br>
+             <div class="text">  
+             <%= comment.commemt %>
           </div>
+          <% end %>
           <div class="twitter__icon">
             <span class="twitter-bubble"></span>
             <span class="twitter-loop"></span>
