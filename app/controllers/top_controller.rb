@@ -9,5 +9,5 @@ class TopController < ApplicationController
     @promises = Promise.where(kid_id: current_user.last_access_kid)
 
   end
-
+ 
 end
