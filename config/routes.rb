@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   
  root to: 'top#index'
  resources :users, only: [:show]
- resources :promises, only: [:show, :create]
+ resources :promises, only: [:show, :create, :new]
  resources :actions, only: [:new, :create, :edit]
 end

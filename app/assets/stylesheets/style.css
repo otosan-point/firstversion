@@ -21,6 +21,11 @@ html {
     font-weight: bold;
 }
 
+.header a{
+    color: #fa6400;
+    text-decoration: none;
+}
+
 .menu {
     height: 40px;
     background-color: #fa6400;
@@ -35,12 +40,19 @@ html {
   text-decoration: none;
   font-family: 'Kosugi Maru', sans-serif;
   color: #ffffff;
+  padding: 12px;
 }
+
+.menu a:hover {
+  background-color: #ff7f50;
+}
+
 
 .menu li {
     list-style: none;
     margin: 0 30px;
     line-height: 40px
+
 }
 
 .main {
@@ -177,11 +189,12 @@ html {
 
 
 .promise_card {
+    font-size: 30px;
     width: 500px;
     height: 200px;
     position: relative;
     padding: 10px 10px;
-    margin: 10px auto;
+    margin: 40px auto;
     border: solid 3px #62c1ce;
     margin-bottom: 60px;
     background-color: #ffffff;
@@ -204,11 +217,11 @@ html {
     font-weight: bold;
     border-radius: 5px 5px 0 0;
 }
+
 .promise_card p {
     font-size: 30px;
     padding-top: 60px;
-	  text-align: center;
-	  
+	text-align: center;
 }
 
 .badge	{width: 100px;
