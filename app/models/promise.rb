@@ -1,9 +1,9 @@
 class Promise < ApplicationRecord
   belongs_to :kid
   has_many :actions
-  belongs_to :user
+  has_one :user, through: :kid
   
   #validation
-  validates_presence_of :promise, :kid_id
+  validates_presence_of :promise
 
 end
