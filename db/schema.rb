@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_09_055329) do
+ActiveRecord::Schema.define(version: 2019_06_16_070423) do
 
   create_table "actions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "commemt"
+    t.text "comment"
     t.integer "promise_id"
     t.integer "kid_id"
     t.integer "approve"
