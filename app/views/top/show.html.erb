@@ -1,0 +1,33 @@
+<div class="contents">
+
+ <div class="kokuban-t2">
+    <span class="title-t2">
+      ポイント合計
+    </span>
+      <%= @kid.name %>さんの合計ポイントです。
+    <span class="title-t3">
+      合計<%= @points %>ポイント
+    </span>
+  </div>
+
+  <div class="boxA">
+
+    <% @promises.each do |prom| %>
+    
+      <div class="box5">
+        <div class="promise_card">
+          <span class="card_title">約束カード</span>
+          	<div class="badge">
+          	  <i class="fas fa-grin-beam"></i>やった！
+  		      </div>
+          <p><%= prom.promise %></p>
+        </div>
+      </div>
+
+    <% end %>
+
+
+
+  </div>
+
+</div>

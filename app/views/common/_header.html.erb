@@ -9,7 +9,7 @@
 <div class="menu">
   <ul>
     <% @kids.each do |kid| %>
-      <li><a><%= kid.name %></a></li>
+      <li><a><%= link_to "#{kid.name}",top_path(kid.id) %></a></li>
     <% end %>
     <li><a><%= link_to "おとうさん", user_path(current_user) %></a></li>
     <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
