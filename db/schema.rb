@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 2019_06_16_070423) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "parents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.text "email"
+    t.string "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "promises", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "promise"
     t.integer "kid_id"
