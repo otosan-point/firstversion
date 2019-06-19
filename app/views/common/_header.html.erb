@@ -2,7 +2,8 @@
 
     <div class="header">
       <i class="fas fa-pencil-alt"></i>
-      お父さんポイント
+      <a href="/">お父さんポイント</a>
+
     </div>
 
 <div class="menu">
@@ -10,7 +11,7 @@
     <% @kids.each do |kid| %>
       <li><a><%= link_to "#{kid.name}",top_path(kid.id) %></a></li>
     <% end %>
-    <li><a><i class="fas fa-lock"></i><%= link_to "おとうさん", user_path(current_user) %></a></li>
+    <li><a><%= link_to "おとうさん", user_path(current_user) %></a></li>
     <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
   </ul>  
   

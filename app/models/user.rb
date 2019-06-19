@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :kids
-  has_many :actions
-  has_many :promises
+  has_many :promises, through: :kids
+  
 end
