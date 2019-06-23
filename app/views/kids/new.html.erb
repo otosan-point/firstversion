@@ -1,0 +1,6 @@
+        <%= form_for @kid do |f| %>
+          <%= f.text_area :name, placeholder: 'なまえ', style: 'width: 100%;height: 25px;' %>
+          <a class="btn-flat-simple">
+            <%= f.submit "追加", class: "fa fa-caret-right" %>
+          </a>
+        <% end %>
