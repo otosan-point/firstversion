@@ -1,13 +1,31 @@
 <div class="contents">
 
- <div class="kokuban-t2">
-    <span class="title-t2">
-      ポイント合計
-    </span>
-      <%= @kid.name %>さんの合計ポイントです。
-    <span class="title-t3">
-      合計<%= @points %>ポイント
-    </span>
+  <div class="boxA">
+
+    <div class="box3">
+      <section class="prof-card">
+        <img class="prof-card-img" src="http://gahag.net/img/201602/25s/gahag-0059907781-1.jpg" alt="">
+        <div class="prof-card-content">
+          <h1 class="prof-card-title"><%= @kid.name %></h1>
+          <p class="prof-card-text">色々説明</p>
+        </div>
+        <div class="prof-card-link">
+          <a href="/">画像の変更</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="box7">
+      <div class="kokuban-t2">
+        <span class="title-t2">
+          ポイント合計
+        </span>
+          <%= @kid.name %>さんの合計ポイントです。
+        <span class="title-t3">
+          合計<%= @points %>ポイント
+        </span>
+      </div>
+    </div>
   </div>
 
   <div class="boxA">

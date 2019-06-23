@@ -29,6 +29,7 @@ html {
 .menu {
     height: 40px;
     background-color: #fa6400;
+    margin: 0 10%;
 }
 
 .menu ul {
@@ -50,7 +51,7 @@ html {
 
 .menu li {
     list-style: none;
-    margin: 0 30px;
+    margin: 0 auto;
     line-height: 40px
 
 }
@@ -77,6 +78,11 @@ html {
 
 }
 
+.boxA{
+    width: 80%;
+    margin: auto;
+}
+
 .boxA:after{
     content: "";
     display: block;
@@ -98,6 +104,20 @@ html {
 .box7{
     float: left;
     width: 70%;
+}
+
+.right-box{
+    padding: 0.5em 1em;
+    margin: 20px 0 0 0.5em;
+    color: #5d627b;
+    background: white;
+    border-top: solid 5px #5d627b;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+}
+.right-box a {
+    margin: 0; 
+    padding: 0;
+    text-decoration: none;
 }
 
 
@@ -136,10 +156,10 @@ html {
 
 /* 黒板風　タイトル　2 */
 .kokuban-t2 {
- width: 500px;
+ width: auto;
  height: 200px;
  position: relative;
- margin: 20px auto 50px;
+ margin: 5px;
  padding: 3.2em 1em 1em;
  background-color: #006633; /* ボックス背景色 */
  color: #fff; /* 文章色 */
@@ -258,4 +278,6 @@ html {
     text-align: center;
     line-height: 50px;
     letter-spacing: 0.1em;
+    width: 80%;
+    margin: auto;
 }

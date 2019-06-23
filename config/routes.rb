@@ -10,4 +10,5 @@ Rails.application.routes.draw do
  resources :users, only: [:show]
  resources :promises, only: [:show, :create, :new]
  resources :actions, only: [:new, :create, :edit]
+ resources :kids, only: [:show, :new, :create]
 end
