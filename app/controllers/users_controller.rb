@@ -6,8 +6,8 @@ class UsersController < ApplicationController
         #@comment_kid = Action.where(kid_id: params[:id])  #子供のコメント
         
         @promises = @user.promises
-        @actions = Action.all.order(created_at: :desc)
-        @action = Action.new
+        @opactions = Opaction.all.order(created_at: :desc)
+        @opaction = Opaction.new
         #@actions = @user.actions
         
         #@promises = []

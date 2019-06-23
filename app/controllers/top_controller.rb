@@ -7,7 +7,7 @@ class TopController < ApplicationController
  def show 
    @kids = current_user.kids
    @kid = Kid.find_by(id: params[:id])
-   @points = Action.where(kid_id: params[:id]).count
+   @points = Opaction.where(kid_id: params[:id]).count
    @promises = Promise.where(kid_id: params[:id])
  end
  

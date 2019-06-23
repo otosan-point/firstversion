@@ -10,14 +10,14 @@
           <div class="twitter__title">
            【<%= kid.name %>】
            <%= prom.promise %>
-           <a class="btn-sticky"><%= prom.actions.count %>ポイント</a> <!-- 本当はapproveでカウントしたい -->
+           <a class="btn-sticky"><%= prom.opactions.count %>ポイント</a> <!-- 本当はapproveでカウントしたい -->
           </div>
       
           <!-- ▼タイムラインエリア scrollを外すと高さ固定解除 -->
           <div class="twitter__contents">
       
-            <% @actions.each do |action| %>
-              <% if action.promise_id == prom.id && action.kid_id != nil %>
+            <% @opactions.each do |opaction| %>
+              <% if opaction.promise_id == prom.id && opaction.kid_id != nil %>
                 
                 <!-- 記事エリア -->
                 <div class="twitter__block">
@@ -26,9 +26,9 @@
                   </figure>
                   <div class="twitter__block-text">
                     <div class="name"><%= kid.name %><span class="name_reply"></span></div>
-                    <div class="date"><%= time_ago_in_words action.created_at %></div>
+                    <div class="date"><%= time_ago_in_words opaction.created_at %></div>
                     <div class="text">
-                      <%= action.comment %><br>
+                      <%= opaction.comment %><br>
                     </div>
                     <div class="twitter__icon">
                       <span class="twitter-bubble"></span>
@@ -38,7 +38,7 @@
                   </div>
                 </div>
     
-              <% elsif action.promise_id == prom.id && action.kid_id == nil %>
+              <% elsif opaction.promise_id == prom.id && opaction.kid_id == nil %>
                 
                 <!-- 記事エリア -->
                 <div class="twitter__block">
@@ -47,9 +47,9 @@
                   </figure>
                   <div class="twitter__block-text">
                     <div class="name">おとうさん<span class="name_reply"></span></div>
-                    <div class="date"><%= time_ago_in_words action.created_at %></div>
+                    <div class="date"><%= time_ago_in_words opaction.created_at %></div>
                     <div class="text">
-                      <%= action.comment %><br>
+                      <%= opaction.comment %><br>
                     </div>
                     <div class="twitter__icon">
                       <span class="twitter-bubble"></span>
@@ -62,7 +62,7 @@
               <% end %>
             <% end %>
               
-            <%= form_for @action do |f| %>
+            <%= form_for @opaction do |f| %>
               <%= f.text_area :comment, placeholder: '応援して', style: 'width: 100%;height: 25px;' %>
               <a class="btn-flat-simple">
                 <%= f.submit "送信", class: "fa fa-caret-right" %>
