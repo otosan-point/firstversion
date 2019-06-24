@@ -7,15 +7,18 @@ class OpactionsController < ApplicationController
     
     def create
     Opaction.create(comment: params[:text], promise_id: params[:promise_id], kid_id: params[:kid_id])
-    redirect_to :root and return
+        if params[:kid_id] == "0"
+            redirect_to "/users/#{current_user.id}" and return
+        else
+            redirect_to "/top/#{params[:kid_id]}" and return
+        end
     end 
 
 
 
-  private
-  def create_params
-    params.require(:opaction).permit(:comment)
-
-  end
+  #private
+  #def create_params
+  #  params.require(:opaction).permit(:comment)
+  #end
 
 end
