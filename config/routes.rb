@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   
  root to: 'top#index'
  resources :top
- resources :promises do
-    resources :comment, only: [:new, :create]
-  end
+ resources :kids do
+   resources :promises do
+    resources :opactions, only: [:new, :create]
+   end
+ end
  resources :users, only: [:show]
  resources :promises, only: [:show, :create, :new]
  resources :opactions, only: [:new, :create, :edit]
