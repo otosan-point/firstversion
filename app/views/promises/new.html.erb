@@ -1,11 +1,13 @@
 <div class="contents row">
     <div class="promise_card">
       <span class="card_title">約束カードを作る</span>
-      <%= form_tag('/promises', method: :post) do %>
-          <textarea name="promise" placeholder="〇〇がんばるぞ！" rows="6" cols="25"></textarea>
-        	<div class="badge">
-        	 <i><input type="submit" value="決定"></i>
-		      </div>
-      <% end %>
+      
+      <%= form_tag("/kids/#{@kid.id}/promises/", method: :post) do %>
+        <textarea name="text" placeholder="〇〇がんばるぞぉ！" rows="6" cols="25"></textarea>
+      	<div class="badge">
+      	  <i><input type="submit" value="約束"></i>
+	      </div>
+      <% end %> 
+
     </div>
 </div>

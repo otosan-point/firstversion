@@ -2,13 +2,14 @@ class PromisesController < ApplicationController
 
   def new
     @kids = current_user.kids
+    @kid = Kid.find_by(id: params[:kid_id])
 
   end
 
   def create
     @kids = current_user.kids
-    @kid = Kid.where(id: current_user.last_access_kid)
-    Promise.create(promise: create_params[:promise], kid_id: current_user.last_access_kid)
+    @kid = Kid.find_by(id: params[:kid_id])
+    Promise.create(promise: params[:text], kid_id: params[:kid_id])
   end
 
   def destroy
@@ -34,7 +35,7 @@ class PromisesController < ApplicationController
   
   private
   def create_params
-    params.permit(:promise)
+    params.permit(:text)
   end
 
 end
