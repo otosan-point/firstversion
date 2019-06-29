@@ -6,13 +6,13 @@
        <% if prom.kid_id == kid.id %>
     
         <div class="twitter__container">
+
           <!-- タイトル -->
           <div class="twitter__title">
            【<%= kid.name %>】
            <%= prom.promise %>
-           <a class="btn-sticky"><%= prom.opactions.count %>ポイント</a> <!-- 本当はapproveでカウントしたい -->
           </div>
-      
+
           <!-- ▼タイムラインエリア scrollを外すと高さ固定解除 -->
           <div class="twitter__contents">
       
@@ -33,7 +33,17 @@
                     <div class="twitter__icon">
                       <span class="twitter-bubble"></span>
                       <span class="twitter-loop"></span>
-                      <span class="twitter-heart"></span>
+                      <% if opaction.approve == 1 %>
+                        <span class="twitter-heart-p">1</span>
+                      <% else %>
+                        <div class="twitter-heart-np">
+                        <%= form_tag("/opactions/#{opaction.id}", method: :patch) do %>
+                          <input type="submit" value="いいね！">
+                          
+                        <% end %>
+                        </div>
+                        
+                      <% end %>
                     </div>
                   </div>
                 </div>
@@ -54,7 +64,7 @@
                     <div class="twitter__icon">
                       <span class="twitter-bubble"></span>
                       <span class="twitter-loop"></span>
-                      <span class="twitter-heart"></span>
+                      <span class="twitter-heart-np"></span>
                     </div>
                   </div>
                 </div>
