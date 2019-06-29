@@ -138,7 +138,7 @@
   color: #8a9aa4;
 }
 
-.twitter__container .twitter__icon .twitter-heart {
+.twitter__container .twitter__icon .twitter-heart-np {
   width: 14px;
   height: 14px;
   display: block;
@@ -147,6 +147,17 @@
   width: 20%;
   float: left;
   color: #8a9aa4;
+}
+
+.twitter__container .twitter__icon .twitter-heart-p {
+  width: 14px;
+  height: 14px;
+  display: block;
+  padding-left: 20px;
+  background: url("svg/twitter-heart.svg") left no-repeat;
+  width: 20%;
+  float: left;
+  color: #ff4500;
 }
 
 .twitter__container .twitter__icon .twitter-loop {

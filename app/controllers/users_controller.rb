@@ -8,6 +8,7 @@ class UsersController < ApplicationController
         @promises = @user.promises
         @opactions = Opaction.all.order(created_at: :desc)
         @opaction = Opaction.new
+        
         #@actions = @user.actions
         
         #@promises = []
