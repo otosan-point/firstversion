@@ -71,3 +71,9 @@ gem 'kaminari'
 
 gem 'jquery-rails' 
 gem 'jquery-ui-rails'
+
+group :production do
+  gem 'rails_12factor'
+end
+
+ruby '2.5.1'
