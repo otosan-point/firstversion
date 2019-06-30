@@ -35,15 +35,16 @@
       <div class="box5">
         <div class="promise_card">
           <span class="card_title">約束カード</span>
-          	<div class="badge">
-          	  <i class="far fa-thumbs-up"></i>
-  		      </div>
+
           <p><%= prom.promise %></p>
-           <%= form_tag("/kids/#{@kid.id}/promises/#{prom.id}/opactions", method: :post) do %>
-           <textarea name="text" placeholder="コメントする" rows="2" cols="15"></textarea>
-           <input type="submit" value="入力">
-           <% end %> 
          </div>
+           <%= form_tag("/kids/#{@kid.id}/promises/#{prom.id}/opactions", method: :post) do %>
+           <textarea name="text" placeholder="コメントする" rows="1" cols="45"></textarea>
+              <a class="btn-flat-simple">
+                <input type="submit" value="やった", class: "fa fa-caret-right">
+              </a>
+           <% end %> 
+
       </div>
 
     <% end %>

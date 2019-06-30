@@ -223,7 +223,7 @@ html {
     padding: 10px 10px;
     margin: 40px auto;
     border: solid 3px #62c1ce;
-    margin-bottom: 60px;
+    margin-bottom: 5px;
     background-color: #ffffff;
     box-shadow: 5px 5px 10px #000;
     -webkit-box-shadow: 5px 5px 10px #adadad;
@@ -271,7 +271,7 @@ html {
 .pickup	{position: relative}
 
 .badge	{position: absolute;
-	top: 65%;
+	top: 85%;
 	right: -20px}
 
 /*　プラスボタン　*/
