@@ -44,6 +44,13 @@
                 <input type="submit" value="やった", class: "fa fa-caret-right">
               </a>
            <% end %> 
+           
+           <% @opactions.each do |opaction| %>
+              <% if opaction.promise_id == prom.id && opaction.kid_id != 0 %>
+                <%= opaction.comment %>
+                <% break %>
+              <% end %>  
+           <% end %>
 
       </div>
 
