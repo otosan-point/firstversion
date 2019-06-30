@@ -34,15 +34,16 @@
                       <span class="twitter-bubble"></span>
                       <span class="twitter-loop"></span>
                       <% if opaction.approve == 1 %>
-                        <span class="twitter-heart-p">1</span>
+                        <span class="twitter-heart-p"><i class="fas fa-heart"></i></span>
                       <% else %>
-                        <div class="twitter-heart-np">
-                        <%= form_tag("/opactions/#{opaction.id}", method: :patch) do %>
-                          <input type="submit" value="いいね！">
+                        <span class="twitter-heart-np">
                           
+                        <%= form_tag("/opactions/#{opaction.id}", method: :patch) do %>
+                          <i class="fas fa-heart">
+                          <input type="submit" value="いいね！">
+                          </i>
                         <% end %>
-                        </div>
-                        
+                        </span>
                       <% end %>
                     </div>
                   </div>
