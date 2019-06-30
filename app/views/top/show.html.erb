@@ -39,11 +39,12 @@
           	  <i class="far fa-thumbs-up"></i>
   		      </div>
           <p><%= prom.promise %></p>
+         </div>
            <%= form_tag("/kids/#{@kid.id}/promises/#{prom.id}/opactions", method: :post) do %>
            <textarea name="text" placeholder="コメントする" rows="2" cols="15"></textarea>
            <input type="submit" value="入力">
            <% end %> 
-         </div>
+
       </div>
 
     <% end %>
