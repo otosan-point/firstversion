@@ -51,6 +51,14 @@
                 <% break %>
               <% end %>  
            <% end %>
+           
+           <!-- おとうさんの最新コメント　-->
+           <% @opactions.each do |opaction| %>
+              <% if opaction.promise_id == prom.id && opaction.kid_id == 0 %>
+                <%= opaction.comment %>
+                <% break %>
+              <% end %>  
+           <% end %>
 
       </div>
 
