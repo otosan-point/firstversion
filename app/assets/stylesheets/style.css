@@ -35,6 +35,7 @@ html {
 .menu ul {
   display: flex;
   justify-content: center;
+  list-style: none;
 }
 
 .menu a {
@@ -64,7 +65,7 @@ html {
 
 .inputbox {
     padding: 0.5em 1em;
-    margin: 2em 0;
+    margin: 5px 0 0 0;
     font-weight: bold;
     color: #6091d3;/*文字色*/
     background: #FFF;
@@ -73,7 +74,6 @@ html {
 }
 
 .contents {
-  /* height: calc(100vh - 140px); */
   background-color: #ffffff;
 
 }
@@ -92,7 +92,7 @@ html {
 .box3{
     float: left;
     width: 30%;
-    padding: 1px 1px;
+    padding: 1px 2px;
 }
 
 .box5{
@@ -104,6 +104,7 @@ html {
 .box7{
     float: left;
     width: 70%;
+    padding: 1px 2px;
 }
 
 .plus-btn-box{
@@ -115,7 +116,7 @@ html {
 
 .right-box{
     padding: 0.5em 1em;
-    margin: 20px 0 0 0.5em;
+    margin: 20px 0 0 0;
     color: #5d627b;
     background: white;
     border-top: solid 5px #5d627b;
@@ -127,38 +128,6 @@ html {
     text-decoration: none;
 }
 
-
-/* 写真に白色フィルター */
-.colorfilter-base {
-    background-color: white;     /* カラーフィルタ効果の色を指定 */
-    display: inline-block;     /* (任意：インラインブロック化したい場合) */
-    position: relative
-}
-.colorfilter-image {
-    opacity: 0.6;     /* カラーフィルタ効果の度合いを指定 */
-    display: block;
-    max-width: 100%;
-	height: auto;
-	vertical-align: bottom
-}
-
-/* ヘッダー画像 */
-.topimg	{max-width: 100%;
-	height: auto;
-	vertical-align: bottom}
-
-/* キャッチコピー */
-.catch	{margin: 0;
-	padding: 15px;
-	background-color: rgba(255,255,255,0.7);
-	font-size: 28px}
-
-/* ヘッダー画像にキャッチコピーを重ねる */
-.top	{position: relative}
-
-.catch	{position: absolute;
-	bottom: 20%;
-	left: 10%}
 
 
 /* 黒板風　タイトル　2 */
@@ -217,18 +186,19 @@ html {
 
 .promise_card {
     font-size: 30px;
-    width: 500px;
+    width: 400px;
     height: 200px;
     position: relative;
     padding: 10px 10px;
     margin: 40px auto;
     border: solid 3px #62c1ce;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
     background-color: #ffffff;
     box-shadow: 5px 5px 10px #000;
     -webkit-box-shadow: 5px 5px 10px #adadad;
     -moz-box-shadow: 5px 5px 10px #adadad;
 }
+
 
 .promise_card .card_title {
     position: absolute;
@@ -247,8 +217,7 @@ html {
 
 .promise_card p {
     font-size: 30px;
-    padding-top: 60px;
-	text-align: center;
+    padding: auto;
 }
 
 .badge	{width: 100px;
@@ -271,7 +240,7 @@ html {
 .pickup	{position: relative}
 
 .badge	{position: absolute;
-	top: 85%;
+	top: 60%;
 	right: -20px}
 
 /*　プラスボタン　*/
@@ -314,4 +283,112 @@ html {
     letter-spacing: 0.1em;
     width: 80%;
     margin: auto;
+}
+
+
+/* スマホ用 */
+
+@media (max-width: 767px){
+
+.header {
+  height: 50px;
+  background-color: #ffffff;
+  padding-left: 0px;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-size: 18px;
+  color: #fa6400;
+  line-height: 50px;
+  letter-spacing: 1px;
+  width: 95%;
+  margin: auto;
+}
+
+.header i{
+    color: #fa6400;
+    font-weight: bold;
+}
+
+.header a{
+    color: #fa6400;
+    text-decoration: none;
+}
+
+.menu {
+    height: 40px;
+    background-color: #fa6400;
+    margin: 0;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.menu a {
+  text-decoration: none;
+  font-family: 'Kosugi Maru', sans-serif;
+  color: #ffffff;
+  padding: 12px;
+}
+
+.menu a:hover {
+  background-color: #ff7f50;
+}
+
+
+.menu li {
+    list-style: none;
+    margin: 0 auto;
+    line-height: 40px;
+    font-size: 14px;
+}
+
+.footer {
+    height: 50px;
+    background-color:#fa6400;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 0.1em;
+    width: 100%;
+    margin: auto;
+}
+    
+.boxA{
+    width: 98%;
+    margin: auto;
+}
+
+.box3{
+    width: 100%;
+    padding: 1px 1px 10px 1px;
+}
+
+.box5{
+    float: left;
+    padding: 1em;
+    width: 100%;
+}
+
+.box7{
+    width: 100%;
+}
+
+.promise_card {
+    font-size: 25px; /*変更 意味なし？*/
+    width: 90%; /*変更*/
+    height: 200px; /*変更*/
+}
+
+
+
+.promise_card p {
+    font-size: 24px; /*変更*/
+}
+
+
+    
 }

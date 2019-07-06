@@ -7,7 +7,7 @@
         <img class="prof-card-img" src="http://gahag.net/img/201602/25s/gahag-0059907781-1.jpg" alt="">
         <div class="prof-card-content">
           <h1 class="prof-card-title"><%= @kid.name %></h1>
-          <p class="prof-card-text">色々説明</p>
+          <p class="prof-card-text">わが家のがんばりや</p>
         </div>
         <div class="prof-card-link">
           <a href="/">画像の変更</a>
@@ -39,7 +39,7 @@
           <p><%= prom.promise %></p>
          </div>
            <%= form_tag("/kids/#{@kid.id}/promises/#{prom.id}/opactions", method: :post) do %>
-           <textarea name="text" placeholder="コメントする" rows="1" cols="45"></textarea>
+           <textarea class="inputbox" name="text" placeholder="コメントする" rows="1" cols="30"></textarea>
               <a class="btn-flat-simple">
                 <input type="submit" value="やった", class: "fa fa-caret-right">
               </a>
@@ -47,7 +47,7 @@
            
            <% @opactions.each do |opaction| %>
               <% if opaction.promise_id == prom.id && opaction.kid_id != 0 %>
-                <%= opaction.comment %>
+                最新コメント「<%= opaction.comment %>」
                 <% break %>
               <% end %>  
            <% end %>
