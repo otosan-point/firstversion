@@ -173,11 +173,12 @@
   position: relative;
   display: inline-block;
   font-weight: bold;
-  padding: 0.25em 0.5em;
+  padding: 6px 5px;
   text-decoration: none;
   color: #00BCD4;
   background: #ECECEC;
   transition: .4s;
+  font-size: 20px
 }
 
 .btn-flat-simple:hover {

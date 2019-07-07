@@ -1,6 +1,6 @@
 .sign-up {
   position: relative;
-  margin: 50px auto;
+  margin: 20px auto;
   width: 280px;
   padding: 33px 25px 29px;
   background: white;
@@ -112,4 +112,54 @@ input {
   text-decoration: none;
   padding: 5px;
   margin-bottom: 15px;
+}
+
+.login-main {
+    width: 100%;
+    margin: auto;
+    padding: 1rem 0;
+}
+
+/* 写真に白色フィルター */
+.colorfilter-base {
+    background-color: white;     /* カラーフィルタ効果の色を指定 */
+    display: inline-block;     /* (任意：インラインブロック化したい場合) */
+    position: relative
+}
+.colorfilter-image {
+    opacity: 0.6;     /* カラーフィルタ効果の度合いを指定 */
+    display: block;
+    max-width: 100%;
+	height: auto;
+	vertical-align: bottom
+}
+
+
+/* ヘッダー画像 */
+.topimg	{max-width: 100%;
+	height: auto;
+	vertical-align: bottom}
+
+/* キャッチコピー */
+.catch	{margin: 0;
+	padding: 15px;
+	background-color: rgba(255,255,255,0.7);
+	font-size: 28px}
+
+/* ヘッダー画像にキャッチコピーを重ねる */
+.top	{position: relative}
+
+.catch	{position: absolute;
+	top: 20%;
+	left: 10%}
+
+/* スマホ用 */
+
+@media (max-width: 767px){
+  
+.catch	{
+	font-size: 20px;
+  left: 5%;
+}
+
 }
