@@ -143,6 +143,7 @@ html {
  border-radius: 3px; /* 角の丸み */
  box-shadow: 0 0 5px #333, 0 0 5px #555 inset;
  font-family: 'Kosugi Maru', sans-serif;
+  -webkit-text-size-adjust: 100%;
 
 }
 .kokuban-t2::before,
