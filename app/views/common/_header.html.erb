@@ -3,7 +3,7 @@
     <div class="header">
       <i class="fas fa-pencil-alt"></i>
       <a href="/">お父さんポイント</a>
-
+      <h1><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></h1>
     </div>
 
 <div class="menu">
@@ -12,7 +12,7 @@
       <li><%= link_to "#{kid.name}",top_path(kid.id) %></li>
     <% end %>
     <li><%= link_to "おとうさん", user_path(current_user) %></li>
-    <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+
   </ul>  
   
 </div>
