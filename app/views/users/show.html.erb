@@ -22,7 +22,13 @@
                 <!-- 記事エリア -->
                 <div class="twitter__block">
                   <figure>
-                    <img src="http://gahag.net/img/201602/25s/gahag-0059907781-1.jpg">
+
+                    <% if kid.image.attached? %>
+                      <%= image_tag kid.image ,:class => "prof-card-img" %>
+                    <% else %>
+                      <img class="prof-card-img" src="http://gahag.net/img/201602/25s/gahag-0059907781-1.jpg" alt="">
+                    <% end %>
+
                   </figure>
                   <div class="twitter__block-text">
                     <div class="name"><%= kid.name %><span class="name_reply"></span></div>
