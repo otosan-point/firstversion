@@ -1,22 +1,20 @@
 
 
-<div class="boxA">
-  <% @kids.each do |kid| %>
-    <div class="box3">
-      <section class="prof-card">
-        <img class="prof-card-img" src="http://gahag.net/img/201602/25s/gahag-0059907781-1.jpg" alt="">
-        <div class="prof-card-content">
-          <h1 class="prof-card-title"><%= kid.name %></h1>
-          <p class="prof-card-text">色々説明</p>
-        </div>
-        <div class="prof-card-link">
-          <a href="/">画像の変更</a>
-        </div>
-      </section>
-    </div>
+<section class="prof-card">
+
+  <% if @kid.image.attached? %>
+      <%= image_tag @kid.image ,:class => "prof-card-img" %>
+  <% else %>
+    <img class="prof-card-img" src="http://gahag.net/img/201602/25s/gahag-0059907781-1.jpg" alt="">
   <% end %>
-  <div class="box3">
-    <%= link_to "子供を追加", new_kid_path, method: :get %>
+
+  <div class="prof-card-content">
+    <h1 class="prof-card-title"><%= @kid.name %></h1>
+    <p class="prof-card-text"><%= @kid.description %></p>
   </div>
-</div>
+  <div class="prof-card-link">
+    <a href="/kids/<%= @kid.id %>/edit">画像の変更</a>
+  </div>
+
+</section>
 

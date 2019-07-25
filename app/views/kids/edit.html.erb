@@ -1,0 +1,10 @@
+<div class="boxA">
+  <%= form_with model: @kid, local: true  do |form| %>
+    <%= @kid.name %><br>
+    <%= form.text_area :description , placeholder: @kid.description, style: 'width: 100%;height: 25px;' %><br>
+    <%= form.file_field :image %><br>
+    <a class="btn-flat-simple">
+      <%= form.submit "アップデート", class: "fa fa-caret-right" %>
+    </a>
+  <% end %>
+</div>

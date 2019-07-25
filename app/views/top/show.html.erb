@@ -4,13 +4,17 @@
 
     <div class="box3">
       <section class="prof-card">
-        <img class="prof-card-img" src="http://gahag.net/img/201602/25s/gahag-0059907781-1.jpg" alt="">
+        <% if @kid.image.attached? %>
+            <%= image_tag @kid.image ,:class => "prof-card-img" %>
+        <% else %>
+          <img class="prof-card-img" src="http://gahag.net/img/201602/25s/gahag-0059907781-1.jpg" alt="">
+        <% end %>
         <div class="prof-card-content">
           <h1 class="prof-card-title"><%= @kid.name %></h1>
-          <p class="prof-card-text">わが家のがんばりや</p>
+          <p class="prof-card-text"><%= @kid.description %></p>
         </div>
         <div class="prof-card-link">
-          <a href="/">画像の変更</a>
+          <a href="/kids/<%= @kid.id %>/edit">画像の変更</a>
         </div>
       </section>
     </div>
@@ -47,7 +51,7 @@
            
            <% @opactions.each do |opaction| %>
               <% if opaction.promise_id == prom.id && opaction.kid_id != 0 %>
-                最新コメント「<%= opaction.comment %>」
+                <%= @kid.name %>「<%= opaction.comment %>」<br>
                 <% break %>
               <% end %>  
            <% end %>
@@ -55,7 +59,7 @@
            <!-- おとうさんの最新コメント　-->
            <% @opactions.each do |opaction| %>
               <% if opaction.promise_id == prom.id && opaction.kid_id == 0 %>
-                <%= opaction.comment %>
+                お父さん「<%= opaction.comment %>」
                 <% break %>
               <% end %>  
            <% end %>
