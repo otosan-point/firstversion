@@ -16,7 +16,7 @@
       <img src="https://images.pexels.com/photos/34014/pexels-photo.jpg" alt="" class="colorfilter-image">
       </p>
     	<p class="catch">お父さんポイントは<br>
-      子供の自律を育む"心の貯金"です。</p>
+      子どもの自律を育む"心の貯金"です。</p>
     </div>
 
     <div class="box3">
@@ -38,13 +38,13 @@
           
             <% if devise_mapping.rememberable? %>
               <div class="login_text">
-                <%= f.check_box :remember_me %>
-                <%= f.label :remember_me %>
+                <%= f.check_box :remember_me,checked:true %>
+                <%= f.label :ログイン情報を記憶 %>
               </div>
             <% end %>
           
             <div class="actions">
-              <%= f.submit "Log in" %>
+              <%= f.submit "ログイン" %>
             </div>
           <% end %>
           
