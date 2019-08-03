@@ -25,6 +25,11 @@
   color: #ffffff;
 }
 
+.twitter__container .twitter__title a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .twitter__container .twitter__title .twitter-logo {
   margin: 0 auto;
   width: 20px;
@@ -169,7 +174,7 @@
   color: #8a9aa4;
 }
 
-.btn-flat-simple {
+.btn-flat-update {
   position: relative;
   display: inline-block;
   font-weight: bold;
@@ -180,6 +185,20 @@
   transition: .4s;
   font-size: 20px
 }
+
+.btn-flat-simple {
+  position: relative;
+  top: -10px;
+  display: inline-block;
+  font-weight: bold;
+  padding: 6px 5px;
+  text-decoration: none;
+  color: #00BCD4;
+  background: #ECECEC;
+  transition: .4s;
+  font-size: 20px
+}
+
 
 .btn-flat-simple:hover {
   background: #00bcd4;
@@ -199,4 +218,10 @@
 .btn-sticky:active {
   box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
   transform: translateY(2px);
+}
+
+.page-nation a {
+    text-decoration: none;
+    color: #000080;
+    font-size: 20px;
 }

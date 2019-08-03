@@ -19,6 +19,10 @@
   text-align: center;
   color: #333;
 }
+.prof-card-title a {
+  text-decoration: none;
+  color: #000;
+}
 .prof-card-text {
   color: #777;
   font-size: 14px;

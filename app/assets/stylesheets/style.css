@@ -141,6 +141,7 @@ html {
     margin: 0; 
     padding: 0;
     text-decoration: none;
+    color: #000080;
 }
 
 
@@ -234,6 +235,11 @@ html {
 .promise_card p {
     font-size: 30px;
     padding: auto;
+}
+
+.promise_card a {
+    text-decoration: none;
+    color: #000080;
 }
 
 .badge	{width: 100px;
@@ -395,7 +401,7 @@ html {
 
 .promise_card {
     font-size: 25px; /*変更 意味なし？*/
-    width: 90%; /*変更*/
+    width: 100%; /*変更*/
     height: 200px; /*変更*/
 }
 

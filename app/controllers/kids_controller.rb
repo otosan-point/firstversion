@@ -1,16 +1,15 @@
 class KidsController < ApplicationController
-    
+  before_action :header_menu
+
     def index
         @kids = current_user.kids
     end
     
     def show
-        @kids = current_user.kids
         @kid = Kid.find(params[:id])
     end
     
     def new
-        @kids = current_user.kids
         @kid = Kid.new
     end
     
@@ -20,7 +19,6 @@ class KidsController < ApplicationController
     end
     
     def edit
-        @kids = current_user.kids
         @kid = Kid.find(params[:id])
     end
 
@@ -30,6 +28,9 @@ class KidsController < ApplicationController
         redirect_to kids_path(current_user) and return
     end
 
+    def header_menu
+        @kids = current_user.kids
+    end
 
     private
     def create_params

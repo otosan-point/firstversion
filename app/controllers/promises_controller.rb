@@ -1,13 +1,12 @@
 class PromisesController < ApplicationController
+  before_action :header_menu
 
   def new
-    @kids = current_user.kids
     @kid = Kid.find_by(id: params[:kid_id])
 
   end
 
   def create
-    @kids = current_user.kids
     @kid = Kid.find_by(id: params[:kid_id])
     Promise.create(promise: params[:text], kid_id: params[:kid_id])
   end
@@ -30,9 +29,14 @@ class PromisesController < ApplicationController
 
   def show 
     @promise = Promise.find(params[:id])
-    @comments = @promise.comments.includes(:user)
+    @opactions = Opaction.all.order(created_at: :desc).where(promise_id: params[:id]).page(params[:page]).per(10)
+    @kid = @promise.kid
   end
   
+  def header_menu
+      @kids = current_user.kids
+  end
+
   private
   def create_params
     params.permit(:text)

@@ -17,7 +17,7 @@
       <img src="https://images.pexels.com/photos/34014/pexels-photo.jpg" alt="" class="colorfilter-image">
       </p>
     	<p class="catch">お父さんポイントは<br>
-      子供の自律を育む"心の貯金"です。</p>
+      子どもの自律を育む"心の貯金"です。</p>
     </div>
     
     <div class="box3">
@@ -36,18 +36,18 @@
             <div class="field">
               <%= f.label :password %>
               <% if @minimum_password_length %>
-              <em>(<%= @minimum_password_length %> 文字以上)</em>
+              (<%= @minimum_password_length %>文字以上)
               <% end %><br />
               <%= f.password_field :password, autocomplete: "new-password" %>
             </div>
           
             <div class="field">
-              <%= f.label :password_confirmation %><br />
+              <%= f.label :パスワード（確認） %><br />
               <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
             </div>
           
             <div class="actions">
-              <%= f.submit "Sign up" %>
+              <%= f.submit "アカウント登録" %>
             </div>
           <% end %>
           
