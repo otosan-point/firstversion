@@ -29,7 +29,7 @@ class PromisesController < ApplicationController
 
   def show 
     @promise = Promise.find(params[:id])
-    @opactions = Opaction.where(promise_id: params[:id])
+    @opactions = Opaction.all.order(created_at: :desc).where(promise_id: params[:id]).page(params[:page]).per(10)
     @kid = @promise.kid
   end
   
