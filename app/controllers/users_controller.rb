@@ -6,37 +6,11 @@ class UsersController < ApplicationController
         #@comment_kid = Action.where(kid_id: params[:id])  #子供のコメント
         
         @promises = @user.promises
-        @opactions = Opaction.all.order(created_at: :desc)
+        @opactions = Opaction.all.order(created_at: :desc).where(created_at: 1.week.ago.beginning_of_day..Time.zone.now.end_of_day)
         @opaction = Opaction.new
         
-        #@actions = @user.actions
-        
-        #@promises = []
-        #@kids.each do |n| 
-        #    promises = Promise.where(kid_id: n.id)
-        #    @promises.push(promises)
-        #end
-        
-        #binding.pry
-        
-        #@actions = []
-        #@kids.each do |n| 
-        #    actions = Action.where(kid_id: n.id)
-        #    @actions.push(actions)
-        #end
-        
-        
-        #@actions = []
-        #@promises.each do |n| 
-        #    actions = Action.where(promise_id: n.id)
-        #    @actions.push(actions)
-        #end
-        #binding.pry
-        
-        # @actions = Action.includes(:promise)
+
     end
     
-
-
 
 end

@@ -1,37 +1,57 @@
-<div class="boxA">
-  <div class="box7">
-    
-    <% @kids.each do |kid| %>
-      <% @promises.each do |prom| %>
-       <% if prom.kid_id == kid.id %>
+  <div class="boxA">
+
+    <div class="box3">
+      <section class="prof-card">
+        <% if @kid.image.attached? %>
+            <%= image_tag @kid.image ,:class => "prof-card-img" %>
+        <% else %>
+          <img class="prof-card-img" src="http://gahag.net/img/201602/25s/gahag-0059907781-1.jpg" alt="">
+        <% end %>
+        <div class="prof-card-content">
+          <h1 class="prof-card-title"><%= @kid.name %></h1>
+          <p class="prof-card-text"><%= @kid.description %></p>
+        </div>
+        <div class="prof-card-link">
+          <a href="/kids/<%= @kid.id %>/edit">画像の変更</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="box7">
+
+        <div class="promise_card">
+          <span class="card_title">約束カード</span>
+
+          <p><%= @promise.promise %></p>
+        </div>
     
         <div class="twitter__container">
 
           <!-- タイトル -->
           <div class="twitter__title">
-           【<%= kid.name %>】 > 
-           <a><%= link_to prom.promise, promise_path(prom.id) %></a>
+           【<%= @kid.name %>】
+           <%= @promise.promise %>
           </div>
 
           <!-- ▼タイムラインエリア scrollを外すと高さ固定解除 -->
           <div class="twitter__contents">
       
             <% @opactions.each do |opaction| %>
-              <% if opaction.promise_id == prom.id && opaction.kid_id != 0 %>
+              <% if opaction.promise_id == @promise.id && opaction.kid_id != 0 %>
                 
                 <!-- 記事エリア -->
                 <div class="twitter__block">
                   <figure>
 
-                    <% if kid.image.attached? %>
-                      <%= image_tag kid.image ,:class => "prof-card-img" %>
+                    <% if @kid.image.attached? %>
+                      <%= image_tag @kid.image ,:class => "prof-card-img" %>
                     <% else %>
                       <img class="prof-card-img" src="http://gahag.net/img/201602/25s/gahag-0059907781-1.jpg" alt="">
                     <% end %>
 
                   </figure>
                   <div class="twitter__block-text">
-                    <div class="name"><%= kid.name %><span class="name_reply"></span></div>
+                    <div class="name"><%= @kid.name %><span class="name_reply"></span></div>
                     <div class="date"><%= time_ago_in_words opaction.created_at %>前</div>
                     <div class="text">
                       <%= opaction.comment %><br>
@@ -42,20 +62,13 @@
                       <% if opaction.approve == 1 %>
                         <span class="twitter-heart-p"><i class="fas fa-heart"></i></span>
                       <% else %>
-                        <span class="twitter-heart-np">
-                          
-                        <%= form_tag("/opactions/#{opaction.id}", method: :patch) do %>
-                          <i class="fas fa-heart">
-                          <input type="submit" value="いいね！">
-                          </i>
-                        <% end %>
-                        </span>
+                        <span class="twitter-heart-np"><i class="fas fa-heart"></i></span>
                       <% end %>
                     </div>
                   </div>
                 </div>
     
-              <% elsif opaction.promise_id == prom.id && opaction.kid_id == 0 %>
+              <% elsif opaction.promise_id == @promise.id && opaction.kid_id == 0 %>
                 
                 <!-- 記事エリア -->
                 <div class="twitter__block">
@@ -80,34 +93,10 @@
             <% end %>
 
     
-    
-            <%= form_tag("/kids/0/promises/#{prom.id}/opactions", method: :post) do %>
-            <textarea name="text" placeholder="応援して" rows="2" cols="110"></textarea>
-              <a class="btn-flat-simple">
-                <input type="submit" value="入力", class: "fa fa-caret-right">
-              </a>
-            <% end %> 
-
-    
-    
           </div>
           <!--　▲タイムラインエリア ここまで -->
         </div>
         <!--　▲twitter風ここまで -->
-        
-       <% end %>
-      <% end %>
-    <% end %>
-  </div>
-
-  <div class="box3">
-    <div class="right-box">
-      <% @kids.each do |kid| %>
-        <%= kid.name %> : 
-        <%= kid.opactions.count(:approve) %>points<br>
-      <% end %>
-      <br>
-      <a><%= link_to "子供プロフィール設定 >", kids_path(current_user) %></a>
     </div>
-  </div>
+    
 </div>
