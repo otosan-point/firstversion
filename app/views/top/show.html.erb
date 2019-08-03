@@ -40,7 +40,7 @@
         <div class="promise_card">
           <span class="card_title">約束カード</span>
 
-          <p><%= prom.promise %></p>
+          <a><%= link_to prom.promise, promise_path(prom.id) %></a>
          </div>
            <%= form_tag("/kids/#{@kid.id}/promises/#{prom.id}/opactions", method: :post) do %>
            <textarea class="inputbox" name="text" placeholder="コメントする" rows="1" cols="30"></textarea>
