@@ -86,6 +86,7 @@ html {
     background: #FFF;
     border: solid 3px #6091d3;/*線*/
     border-radius: 10px;/*角の丸み*/
+    width: 100%;
 }
 
 .contents {
