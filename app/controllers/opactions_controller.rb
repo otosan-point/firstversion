@@ -6,10 +6,10 @@ class OpactionsController < ApplicationController
    #end
     
     def create
-        if params[:text] == ""
-            Opaction.create(comment: "やった", promise_id: params[:promise_id], kid_id: params[:kid_id])
+        if params[:comment] == ""
+            Opaction.create(create_params_yatta)
         else
-            Opaction.create(comment: params[:text], promise_id: params[:promise_id], kid_id: params[:kid_id])
+            Opaction.create(create_params)
         end
         
         if params[:kid_id] == "0"
@@ -25,10 +25,13 @@ class OpactionsController < ApplicationController
         redirect_to "/users/#{current_user.id}" and return
     end
 
+    private
+    def create_params_yatta
+        params.permit(:promise_id, :kid_id, :image).merge(comment: "やった")
+    end
 
-  #private
-  #def create_params
-  #  params.require(:opaction).permit(:comment)
-  #end
+    def create_params
+        params.permit(:comment, :promise_id, :kid_id, :image)
+    end
 
 end

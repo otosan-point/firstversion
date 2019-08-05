@@ -35,7 +35,15 @@
                     <div class="date"><%= time_ago_in_words opaction.created_at %>前</div>
                     <div class="text">
                       <%= opaction.comment %><br>
+                    
+                      <% if opaction.image.attached? %>
+                        <div class="in-pict">
+                          <%= image_tag opaction.image %>
+                        </div>
+                      <% end %>
+                    
                     </div>
+
                     <div class="twitter__icon">
                       <span class="twitter-bubble"></span>
                       <span class="twitter-loop"></span>
