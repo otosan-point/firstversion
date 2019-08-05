@@ -82,7 +82,7 @@ html {
     padding: 0.5em 1em;
     margin: 5px 0 0 0;
     font-weight: bold;
-    color: #6091d3;/*文字色*/
+    color: #000080;/*文字色*/
     background: #FFF;
     border: solid 3px #6091d3;/*線*/
     border-radius: 10px;/*角の丸み*/
@@ -186,7 +186,7 @@ html {
  left: 1em;
  top: .5em;
  font-weight: bold;
- font-size: 24PX;
+ font-size: 20PX;
  font-family: 'Kosugi Maru', sans-serif;
  color: #ffff6b; /* タイトル色 */
 }
@@ -196,7 +196,7 @@ html {
  right: 1em;
  bottom: 1em;
  font-weight: bold;
- font-size: 24px;
+ font-size: 20px;
  font-family: 'Kosugi Maru', sans-serif;
  color: #ffff6b; /* タイトル色 */
 }
@@ -234,13 +234,14 @@ html {
 }
 
 .promise_card p {
-    font-size: 30px;
+    font-size: 25px;
     padding: auto;
 }
 
 .promise_card a {
     text-decoration: none;
     color: #000080;
+    font-size: 25px;
 }
 
 .badge	{width: 100px;
