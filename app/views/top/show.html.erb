@@ -39,30 +39,32 @@
       <div class="box5">
         <div class="promise_card">
           <span class="card_title">約束カード</span>
-
           <a><%= link_to prom.promise, promise_path(prom.id) %></a>
-         </div>
-           <%= form_tag("/kids/#{@kid.id}/promises/#{prom.id}/opactions", method: :post) do %>
-           <textarea class="inputbox" name="text" placeholder="コメントする" rows="1" cols="30"></textarea>
-              <a class="btn-flat-simple">
-                <input type="submit" value="やった", class: "fa fa-caret-right">
-              </a>
-           <% end %> 
+        </div>
+         
+         <%= form_with url: "/kids/#{@kid.id}/promises/#{prom.id}/opactions", local: true  do |form| %>
+            <%= form.file_field :image %><br>
+            <div class="inputbox"><%= form.text_area :comment, placeholder: "コメントする", style: 'width: 100%;height: 20px;' %></div>
+
+            <a class="btn-flat-simple">
+              <%= form.submit "やった", class: "fa fa-caret-right" %><br>
+            </a>
+         <% end %>
+         <br>
+         <% @opactions.each do |opaction| %>
+            <% if opaction.promise_id == prom.id && opaction.kid_id != 0 %>
+              <%= @kid.name %>「<%= opaction.comment %>」<br>
+              <% break %>
+            <% end %>  
+         <% end %>
            
-           <% @opactions.each do |opaction| %>
-              <% if opaction.promise_id == prom.id && opaction.kid_id != 0 %>
-                <%= @kid.name %>「<%= opaction.comment %>」<br>
-                <% break %>
-              <% end %>  
-           <% end %>
-           
-           <!-- おとうさんの最新コメント　-->
-           <% @opactions.each do |opaction| %>
-              <% if opaction.promise_id == prom.id && opaction.kid_id == 0 %>
-                お父さん「<%= opaction.comment %>」
-                <% break %>
-              <% end %>  
-           <% end %>
+         <!-- おとうさんの最新コメント　-->
+         <% @opactions.each do |opaction| %>
+            <% if opaction.promise_id == prom.id && opaction.kid_id == 0 %>
+              お父さん「<%= opaction.comment %>」
+              <% break %>
+            <% end %>  
+         <% end %>
 
       </div>
 
