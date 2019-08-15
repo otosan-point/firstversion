@@ -89,6 +89,10 @@ html {
     width: 100%;
 }
 
+.inputbox textarea {
+	resize: none;
+}
+
 .contents {
   background-color: #ffffff;
 
@@ -153,7 +157,7 @@ html {
  height: 295px;
  position: relative;
  margin: 5px;
- padding: 3.2em 1em 1em;
+ padding: 3em 1em 1em;
  background-color: #006633; /* ボックス背景色 */
  color: #fff; /* 文章色 */
  border: 8px solid #b2771f; /* 枠線 */
@@ -182,25 +186,53 @@ html {
  border-radius: 8px 5px 2px 5px;
 }
 .title-t2 {
+ white-space: nowrap;
  position: absolute;
- left: 1em;
- top: .5em;
+ left: 10px;
+ top: 8px;
  font-weight: bold;
  font-size: 20PX;
  font-family: 'Kosugi Maru', sans-serif;
  color: #ffff6b; /* タイトル色 */
 }
 
+.title-t2 p{
+  white-space: pre;
+  position: absolute;
+  left: 11px;
+  color: #fff;
+  font-size: 16px;
+}
+
 .title-t3 {
+ white-space: nowrap;
  position: absolute;
- right: 1em;
- bottom: 1em;
+ right: 10px;
+ bottom: 16px;
  font-weight: bold;
- font-size: 20px;
+ font-size: 24px;
  font-family: 'Kosugi Maru', sans-serif;
  color: #ffff6b; /* タイトル色 */
 }
 
+.title-message {
+ white-space: nowrap;
+ position: absolute;
+ left: 10px;
+ top: 130px;
+ font-weight: bold;
+ font-size: 20PX;
+ font-family: 'Kosugi Maru', sans-serif;
+ color: #ffff6b; /* タイトル色 */
+}
+
+.title-message p{
+  white-space: pre;
+  position: absolute;
+  left: 11px;
+  color: #fff;
+  font-size: 16px;
+}
 
 .promise_card {
     font-size: 30px;
