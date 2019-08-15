@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :rememberable, :validatable
   has_many :kids
   has_many :promises, through: :kids
+  has_one :messageboard
   #has_many :actions, through: :kids
   #has_many :actions, through: :promises
   

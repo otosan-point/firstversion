@@ -13,4 +13,5 @@ Rails.application.routes.draw do
  resources :promises, only: [:show, :create, :new]
  resources :opactions, only: [:new, :create, :update, :edit]
  resources :kids, only: [:show, :new, :create]
+ resources :messageboards, only: [:show, :new, :create, :update, :edit]
 end

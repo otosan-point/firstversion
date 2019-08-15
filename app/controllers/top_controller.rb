@@ -2,6 +2,10 @@ class TopController < ApplicationController
   before_action :header_menu
   
   def index
+      @messageboard = Messageboard.find_by(user_id: current_user.id)
+        if @messageboard == nil
+            redirect_to new_messageboard_path and return
+        end
   end
  
  def show 

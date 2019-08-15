@@ -1,6 +1,19 @@
-
-
 <div class="contents">
 
-
+    <div class="boxA">
+      <div class="kokuban-t2">
+        <span class="title-t2">
+          我が家のルール
+          <p><% if @messageboard != nil %><%= @messageboard.rule %><% end %></p>
+        </span>
+          
+        <span class="title-message">
+          伝言板
+          <p><% if @messageboard != nil %><%= @messageboard.message %><% end %></p>
+        </span>
+          
+      </div>
+    
+    </div>
 </div>
+

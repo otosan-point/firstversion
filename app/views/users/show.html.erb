@@ -115,7 +115,8 @@
         <%= kid.opactions.count(:approve) %>points<br>
       <% end %>
       <br>
-      <a><%= link_to "子供プロフィール設定 >", kids_path(current_user) %></a>
+      <a><%= link_to "子供プロフィール設定 >", kids_path(current_user) %></a><br>
+      <a><%= link_to "我が家のルール・伝言板の設定 >", edit_messageboard_path(current_user) %></a>
     </div>
   </div>
 </div>

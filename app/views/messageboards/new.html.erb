@@ -1,0 +1,8 @@
+<div class="boxA">
+  <%= form_with model: @messageboard, local: true  do |form| %>
+    <%= form.text_area :rule, placeholder: '我が家のルール', style: 'width: 100%;height: 50px;' %><br>
+    <a class="btn-flat-update">
+      <%= form.submit "決定", class: "fa fa-caret-right" %>
+    </a>
+  <% end %>
+</div>
