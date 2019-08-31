@@ -145,6 +145,93 @@ input {
 	padding: 15px;
 	background-color: rgba(255,255,255,0.7);
 	font-size: 28px}
+	
+.facebook_share{
+  padding: 5px;
+}
+
+.login_text h1{
+  font-size: 38px;
+  text-align: center;
+  margin: 100px auto;
+  color: #000080;
+  text-decoration: none;
+}
+
+.login_text h2{
+  font-size: 30px;
+  text-align: center;
+  margin: 30px auto;
+  color: #fa6400;
+}
+
+.login_text p{
+  font-size: 20px;
+  color: #000080;
+  margin: auto;
+}
+
+.login_text img{
+  max-width: 100%;
+  max-height: 200px;
+}
+
+.login_boxA{
+  width: 80%;
+  margin: auto;
+}
+
+.login_boxA:after{
+    content: "";
+    display: block;
+    clear: both
+}
+
+.login_box7{
+  float: left;
+  width: 70%;
+  padding: 30px 2px;
+}
+
+.login_box3{
+  float: left;
+  width: 30%;
+  padding: 1px 2px;
+}
+
+.login_box33{
+  float: left;
+  width: 33.33%;
+  padding: 5px 10px;
+}
+
+.signin_balloon {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #e0edff;
+}
+
+.signin_balloon:before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  margin-left: -15px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #e0edff;
+}
+
+.signin_balloon p {
+  margin: 0;
+  padding: 0;
+}
+
 
 /* ヘッダー画像にキャッチコピーを重ねる */
 .top	{position: relative}
@@ -160,6 +247,35 @@ input {
 .catch	{
 	font-size: 20px;
   left: 5%;
+}
+
+.login_boxA{
+    width: 98%;
+    margin: auto;
+}
+
+.login_box3{
+    width: 98%;
+    padding: 1px 1px 10px 1px;
+}
+
+.login_box33{
+    width: 80%;
+    padding: 5px 10px;
+}
+
+.login_box5{
+    float: left;
+    padding: 1em;
+    width: 98%;
+}
+
+.login_box7{
+    width: 98%;
+}
+
+.login_text img{
+  max-height: 400px;
 }
 
 }
