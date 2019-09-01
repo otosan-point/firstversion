@@ -134,6 +134,11 @@ input {
 	vertical-align: bottom
 }
 
+.top_image img{
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+}
 
 /* ヘッダー画像 */
 .topimg	{max-width: 100%;
